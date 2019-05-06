@@ -1,3 +1,11 @@
+![长城数字](assets/gdslogo-dark.png)
+
+## 适用IS版本
+
+本项目仅适用于定制IS的5.7.0版本，依赖的carbon-ui版本是4.4.35.
+
+> 若针对其它IS版本或WSO2产品，需要查看该版本所依赖的carbon-ui版本修改项目主pom.xml中的**CARBON.UI.VERSION.NUMBER**属性，然后执行mvn clean install进行项目构建。
+
 ## 一、说明
 
 每个carbon产品的用户界面允许您配置、监控、调整和维护产品。 的组件制定这些用户界面的设计和风格在资源(jar)文件中定义。
@@ -17,7 +25,34 @@
 
 ## 三、如何使用该项目来自定义IS的管理控制台？
 
-1、构建这个项目。
+1、拉取项目
+
+```
+git clone  https://github.com/tongpi/carbon-ui-custom-is.git
+```
+
+2、创建项目分支
+
+```shell
+git checkout -b wch_lbb
+# wch_lbb是根据项目信息定义的分支名称
+```
+
+3、开始定制
+
+> 1）、修改pom.xml文件中的**CARBON.UI.VERSION.NUMBER**属性适合你的产品版本
+>
+> 2）、修改模块项目**org.wso2.carbon.ui_patch**中的src/main/resources/web/admin文件夹下的三个子文件夹中的内容
+>
+> css/customizations.css   你需要修改的样式文件。
+>
+> images/   你需要添加或修改的图片文件
+>
+> layout/template.jsp   你需要修改的界面布局文件
+
+
+
+4、构建这个项目。
 
 > 打开终端,导航到相关项目目录(上述),并执行下面的命令:
 >
@@ -39,11 +74,20 @@
 > org.wso2.carbon.ui_4.4.35_patch-1.0.0.jar
 > ```
 
-2、复制上面两个jar文件到下面的目录中
+5、复制上面两个jar文件到下面的目录中
 
 ```
 <PRODUCT_HOME>/repository/components/dropins/
 ```
 
-3、重新启动WSO2产品服务器。
+6、重新启动WSO2产品服务器。
+
+7、提交你的修改到你创建的分支并push到https://github.com/tongpi/carbon-ui-custom-is.git
+
+```shell
+git commit -am "<message>"
+
+git push -u origin wch_lbb
+# wch_lbb是根据项目信息定义的分支名称
+```
 
