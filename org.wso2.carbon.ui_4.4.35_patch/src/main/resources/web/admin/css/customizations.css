@@ -1,0 +1,11 @@
+#header div#header-div div.left-logo {
+	background-image: url( ../images/new-logo.png );
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: contain;
+	height: 32px;
+	width: 330px;
+	margin-top: 23px;
+	margin-left: 20px;
+	float: left;
+}
