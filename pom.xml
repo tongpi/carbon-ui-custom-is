@@ -9,8 +9,10 @@
 	<packaging>pom</packaging>
 	<name>carbon-ui-custom-is</name>
 	<modules>
-		<module>org.wso2.carbon.ui_4.4.35_fragment</module>
-		
-		<module>org.wso2.carbon.ui_4.4.35_patch</module>
+		<module>modules/org.wso2.carbon.ui_fragment</module>		
+		<module>modules/org.wso2.carbon.ui_patch</module>
 	</modules>
+	<properties>
+		<CARBON.UI.VERSION.NUMBER>4.4.35</CARBON.UI.VERSION.NUMBER>
+	</properties>
 </project>

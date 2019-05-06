@@ -6,11 +6,12 @@
 	<parent>
 		<groupId>gds.is</groupId>
 		<artifactId>carbon-ui-custom-is</artifactId>
+		<relativePath>../../pom.xml</relativePath>
 		<version>1.0.0</version>
-		<relativePath>..</relativePath>
 	</parent>
 	<groupId>org.wso2.carbon</groupId>
-	<artifactId>org.wso2.carbon.ui_4.4.35_patch</artifactId>
+	<artifactId>org.wso2.carbon.ui_${CARBON.UI.VERSION.NUMBER}_fragment</artifactId>
+	<version>1.0.0</version>
 	<packaging>bundle</packaging>
 
 	<build>
@@ -24,7 +25,8 @@
 					<instructions>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Bundle-Name>${project.artifactId}</Bundle-Name>
-						<Export-Package>web.admin.*</Export-Package>
+						<Require-Bundle>org.wso2.carbon.ui_${CARBON.UI.VERSION.NUMBER}_patch</Require-Bundle>
+						<Fragment-Host>org.wso2.carbon.ui</Fragment-Host>
 					</instructions>
 				</configuration>
 			</plugin>
