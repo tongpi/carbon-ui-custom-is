@@ -116,8 +116,8 @@
 <!--[if gte IE 7]>
     <link href="../dialog/css/dialog-ie8.css" rel="stylesheet" type="text/css" media="all"/>
     <![endif]-->
-<link rel="icon" href="../admin/images/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="../admin/images/favicon.ico"
+<link rel="icon" href="../admin/images/favicong.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="../admin/images/favicong.ico"
 	type="image/x-icon" />
 
 <%
